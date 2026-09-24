@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* Header */
+
+.header {
+    background: #17202a;
+    color: white;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 28px;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #bdc3c7;
+}
+
+.live-status {
+    background: #263238;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.live-status span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #2ecc71;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+
+    padding: 25px;
+}
+
+
+/* Vehicle Panel */
+
+.vehicle-panel {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.vehicle-panel h2 {
+    margin-bottom: 20px;
+}
+
+.vehicle-card {
+    text-align: center;
+}
+
+.vehicle-icon {
+    font-size: 55px;
+    margin: 15px;
+}
+
+.vehicle-card h3 {
+    margin-bottom: 20px;
+}
+
+.info {
+    text-align: left;
+}
+
+.info p {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 14px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.moving {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+
+/* Map */
+
+.map-section {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.map-header span {
+    background: #3498db;
+    color: white;
+
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+
+    color: #777;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

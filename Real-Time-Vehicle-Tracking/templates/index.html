@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Real-Time Vehicle Tracking System</title>
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>🚗 Vehicle Tracking System</h1>
+            <p>Real-Time Vehicle Monitoring Dashboard</p>
+        </div>
+
+        <div class="live-status">
+            <span></span> LIVE
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+
+        <!-- Vehicle Information -->
+        <section class="vehicle-panel">
+
+            <h2>Vehicle Information</h2>
+
+            <div class="vehicle-card">
+
+                <div class="vehicle-icon">
+                    🚗
+                </div>
+
+                <h3>Vehicle VH001</h3>
+
+                <div class="info">
+                    <p>
+                        <strong>Status</strong>
+                        <span class="moving">Moving</span>
+                    </p>
+
+                    <p>
+                        <strong>Speed</strong>
+                        <span id="speed">42 km/h</span>
+                    </p>
+
+                    <p>
+                        <strong>Latitude</strong>
+                        <span id="latitude">12.9716</span>
+                    </p>
+
+                    <p>
+                        <strong>Longitude</strong>
+                        <span id="longitude">77.5946</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Map -->
+        <section class="map-section">
+
+            <div class="map-header">
+                <h2>Live Location</h2>
+                <span>VH001</span>
+            </div>
+
+            <div id="map"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Real-Time Vehicle Tracking System | Mini Project</p>
+    </footer>
+
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Our JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
